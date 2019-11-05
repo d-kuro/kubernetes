@@ -169,11 +169,11 @@ tree
 │   └── ...
 └── deploy-prod # Prod deploy folder
 │   ├── us-central
-│   │   ├── kustomization.yaml # Uses bases: ["../../prod/us-central"]
+│   │   ├── kustomization.yaml # Uses resources: ["../../prod/us-central"]
 │   ├── us-east
-│   │   └── kustomization.yaml # Uses bases: ["../../prod/us-east"]
+│   │   └── kustomization.yaml # Uses resources: ["../../prod/us-east"]
 │   └── us-west
-│       └── kustomization.yaml # Uses bases: ["../../prod/us-west"]
+│       └── kustomization.yaml # Uses resources: ["../../prod/us-west"]
 ├── prod # From Base Branch
 │   └── ...
 ├── staging # From Base Branch
@@ -191,7 +191,7 @@ tree
 │   ├── ...
 ├── deploy-staging # Staging deploy folder
 │   └── us-west
-│       └── kustomization.yaml # Uses bases: ["../../staging/us-west"]
+│       └── kustomization.yaml # Uses resources: ["../../staging/us-west"]
 ├── prod # From Base Branch
 │   └── ...
 ├── staging # From Base Branch
@@ -209,7 +209,7 @@ tree
 │   ├── ...
 ├──deploy-test # Test deploy folder
 │   └── us-west
-│       └── kustomization.yaml # Uses bases: ["../../test/us-west"]
+│       └── kustomization.yaml # Uses resources: ["../../test/us-west"]
 ├── prod # From Base Branch
 │   └── ...
 ├── staging # From Base Branch

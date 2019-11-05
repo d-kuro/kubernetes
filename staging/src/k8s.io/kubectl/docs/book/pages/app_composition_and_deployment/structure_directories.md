@@ -134,7 +134,7 @@ tree
 │       └── statefulset.yaml
 ├── prod # Production
 │   ├── bases 
-│   │   ├── kustomization.yaml # Uses bases: ["../../bases"]
+│   │   ├── kustomization.yaml # Uses resources: ["../../bases"]
 │   │   ├── backend
 │   │   │   └── deployment-patch.yaml # Production Env specific backend overrides
 │   │   ├── frontend
@@ -142,23 +142,23 @@ tree
 │   │   └── storage
 │   │       └── statefulset-patch.yaml # Production Env specific storage overrides
 │   ├── us-central
-│   │   ├── kustomization.yaml # Uses bases: ["../bases"]
+│   │   ├── kustomization.yaml # Uses resources: ["../bases"]
 │   │   └── backend
 │   │       └── deployment-patch.yaml # us-central cluster specific backend overrides
 │   ├── us-east 
-│   │   └── kustomization.yaml # Uses bases: ["../bases"]
+│   │   └── kustomization.yaml # Uses resources: ["../bases"]
 │   └── us-west 
-│       └── kustomization.yaml # Uses bases: ["../bases"]
+│       └── kustomization.yaml # Uses resources: ["../bases"]
 ├── staging # Staging
 │   ├── bases 
-│   │   ├── kustomization.yaml # Uses bases: ["../../bases"]
+│   │   ├── kustomization.yaml # Uses resources: ["../../bases"]
 │   └── us-west 
-│       └── kustomization.yaml # Uses bases: ["../bases"]
+│       └── kustomization.yaml # Uses resources: ["../bases"]
 └── test # Test
     ├── bases 
-    │   ├── kustomization.yaml # Uses bases: ["../../bases"]
+    │   ├── kustomization.yaml # Uses resources: ["../../bases"]
     └── us-west 
-        └── kustomization.yaml # Uses bases: ["../bases"]
+        └── kustomization.yaml # Uses resources: ["../bases"]
 ```
 
 {% endmethod %}

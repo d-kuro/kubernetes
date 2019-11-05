@@ -91,7 +91,7 @@ tree
 │   ├── kustomization.yaml
 │   └── ...
 ├── java # Java Bases
-│   ├── kustomization.yaml # Uses bases: ["../bases"]
+│   ├── kustomization.yaml # Uses resources: ["../bases"]
 │   └── ...
 └── python # Python Bases
 ```
